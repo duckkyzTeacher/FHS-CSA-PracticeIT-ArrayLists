@@ -1,12 +1,11 @@
 package src.test.java;
 import src.main.java.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
-import org.junit.Test;
 import java.util.ArrayList;
+import src.main.java.PracticeITArrayList;
 
 public class PracticeITArrayListTest {
 

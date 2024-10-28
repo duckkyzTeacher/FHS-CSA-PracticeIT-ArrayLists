@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import src.main.java.PracticeITArrayList;
 
 public class PracticeITArrayListTest {
 

@@ -372,8 +372,10 @@ public class PracticeITArrayListTest {
         list1.add("hi");
         list1.add("there");
 
-        assertArrayEquals(new String[]{"hi", "hi", "there", "there"}, 
-            PracticeITArrayList.stutter(list1, 2).toArray(new String[0]));
+		PracticeITArrayList.stutter(list1, 2);
+		
+        assertArrayEquals(new String[]{"hi", "hi", "there", "there"},
+							list1.toArray(new String[0]));
     }
 
     @Test
@@ -382,8 +384,10 @@ public class PracticeITArrayListTest {
         list2.add("Hello");
         list2.add("World");
 
-        assertArrayEquals(new String[]{"Hello", "Hello", "Hello", "Hello", "Hello", "World", "World", "World", "World", "World"}, 
-            PracticeITArrayList.stutter(list2, 5).toArray(new String[0]));
+		PracticeITArrayList.stutter(list2, 5);
+        
+		assertArrayEquals(new String[]{"Hello", "Hello", "Hello", "Hello", "Hello", "World", "World", "World", "World", "World"}, 
+            list2.toArray(new String[0]));
     }
 
     @Test
@@ -392,8 +396,10 @@ public class PracticeITArrayListTest {
         list3.add("just");
         list3.add("one");
 
+		PracticeITArrayList.stutter(list3, 2);
+
         assertArrayEquals(new String[]{"just", "just", "one", "one"}, 
-            PracticeITArrayList.stutter(list3, 2).toArray(new String[0]));
+            list3.toArray(new String[0]));
     }
 
     @Test
@@ -401,8 +407,10 @@ public class PracticeITArrayListTest {
         ArrayList<String> list4 = new ArrayList<>();
         list4.add("a");
 
+		PracticeITArrayList.stutter(list4, 4);
+
         assertArrayEquals(new String[]{"a", "a", "a", "a"}, 
-            PracticeITArrayList.stutter(list4, 4).toArray(new String[0]));
+            list4.toArray(new String[0]));
     }
     
         @Test
@@ -410,8 +418,10 @@ public class PracticeITArrayListTest {
         ArrayList<String> list5 = new ArrayList<>();
         list5.add("b");
 
+		PracticeITArrayList.stutter(list5, 0);
+
         assertArrayEquals(new String[]{}, 
-            PracticeITArrayList.stutter(list5, 0).toArray(new String[0]));
+            list5.toArray(new String[0]));
     }
     
         @Test
@@ -419,16 +429,20 @@ public class PracticeITArrayListTest {
         ArrayList<String> list6 = new ArrayList<>();
         list6.add("c");
 
+		PracticeITArrayList.stutter(list6, -5);
+
         assertArrayEquals(new String[]{}, 
-            PracticeITArrayList.stutter(list6, -5).toArray(new String[0]));
+            list6.toArray(new String[0]));
     }
 
     @Test
     public void testStutter7() {
         ArrayList<String> list7 = new ArrayList<>();
 
+		PracticeITArrayList.stutter(list7, 42);
+
         assertArrayEquals(new String[]{}, 
-            PracticeITArrayList.stutter(list7, 42).toArray(new String[0]));
+            list7.toArray(new String[0]));
     }
 
     @Test
